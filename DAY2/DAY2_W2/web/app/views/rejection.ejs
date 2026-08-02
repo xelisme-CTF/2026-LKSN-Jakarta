@@ -1,0 +1,25 @@
+<%- include('partials/head') %>
+<main>
+  <section class="rejection">
+    <img class="hero-media" src="/assets/antek-aseng-denied.png" alt="Private lounge entrance">
+    <div class="gate-panel">
+      <p class="eyebrow">Private forum</p>
+      <h1>Entry rejected.</h1>
+      <p class="lead">
+        This lounge only admits approved VVIP guests.
+      </p>
+      <% if (message) { %>
+        <p class="notice"><%= message %></p>
+      <% } %>
+      <form method="post" action="/review" class="review-form" data-review-form>
+        <label for="url">URL</label>
+        <div class="input-row">
+          <input id="url" name="url" type="url" maxlength="700" required placeholder="https://example.com/page" value="<%= submittedUrl %>">
+          <button class="button primary" type="submit">Submit</button>
+        </div>
+      </form>
+    </div>
+  </section>
+</main>
+</body>
+</html>

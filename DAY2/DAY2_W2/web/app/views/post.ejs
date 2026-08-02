@@ -1,0 +1,12 @@
+<%- include('partials/head') %>
+<main>
+  <article class="member-hall post-detail">
+    <p class="eyebrow"><%= post.category %></p>
+    <h1><%= post.title %></h1>
+    <% post.body.forEach((paragraph) => { %>
+      <p class="lead"><%= paragraph %></p>
+    <% }) %>
+  </article>
+</main>
+</body>
+</html>

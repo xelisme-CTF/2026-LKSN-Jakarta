@@ -1,0 +1,21 @@
+<%- include('partials/head') %>
+<main>
+  <section class="member-hall">
+    <p class="eyebrow">VVIP access</p>
+    <h1>Lounge access granted.</h1>
+    <p class="lead">
+      Welcome back, <%= member %>. Your profile is approved for the private VVIP lounge.
+    </p>
+    <div class="post-list">
+      <% posts.forEach((post) => { %>
+        <article class="post-card">
+          <span><%= post.category %></span>
+          <h2><a href="/members/posts/<%= post.slug %>"><%= post.title %></a></h2>
+          <p><%= post.summary %></p>
+        </article>
+      <% }) %>
+    </div>
+  </section>
+</main>
+</body>
+</html>
